@@ -9,6 +9,7 @@ License: GPL
 Group: Sciences/Mathematics
 Source: http://www.isi.edu/nsnam/dist/xgraph-%version.tar.bz2
 URL: http://www.isi.edu/nsnam/xgraph
+BuildRoot: %_tmppath/%name-%version-root
 
 BuildRequires: X11-devel
 
