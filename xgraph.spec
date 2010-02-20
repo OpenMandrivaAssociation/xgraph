@@ -8,10 +8,12 @@ Release: %release
 License: GPL
 Group: Sciences/Mathematics
 Source: http://www.isi.edu/nsnam/dist/xgraph-%version.tar.bz2
+Patch0: xgraph-12.1-glibc-2.10.patch
+Patch1: xgraph-makefile-gentoo.patch
+Patch2: xgraph-12.1-fix-str-fmt.patch
 URL: http://www.isi.edu/nsnam/xgraph
 BuildRoot: %_tmppath/%name-%version-root
-
-BuildRequires: X11-devel
+BuildRequires: libx11-devel
 
 %description
 The xgraph program draws a graph on an X display given data read from
@@ -23,14 +25,17 @@ control the appearance of most components of the graph.
 
 %prep
 %setup -q 
+%patch0 -p1
+%patch1 -p1
+%patch2 -p0
 
 %build
-%configure 
+%configure2_5x
 %make
 
 %install
 rm -rf %_tmppath/%name-%version-root
-%makeinstall
+%makeinstall_std
 mv %buildroot%{_mandir}/manm %buildroot%{_mandir}/man1
 mv %buildroot%{_mandir}/man1/xgraph.man %buildroot%{_mandir}/man1/xgraph.1
 
