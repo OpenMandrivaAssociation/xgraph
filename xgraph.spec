@@ -1,5 +1,5 @@
 %define version 12.1
-%define release %mkrel 7
+%define release %mkrel 8
 
 Summary:  Interactive plotting and graphing X11 in command line
 Name: xgraph
