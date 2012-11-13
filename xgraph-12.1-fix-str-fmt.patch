@@ -1,0 +1,20 @@
+--- xgraph.c.str	2010-02-20 18:40:42.000000000 +0100
++++ xgraph.c	2010-02-20 18:41:07.000000000 +0100
+@@ -457,7 +457,7 @@
+ 			spot->yvec[j] = 0.0;
+ 		    else {
+ 			(void) fprintf(stderr, paramstr[0], "Y");
+-			(void) fprintf(stderr, paramstr[1]);
++			(void) fprintf(stderr, "%s", paramstr[1]);
+ 			exit(1);
+ 		    }
+ 		}
+@@ -469,7 +469,7 @@
+ 			spot->xvec[j] = 0.0;
+ 		    else {
+ 			(void) fprintf(stderr, paramstr[0], "X");
+-			(void) fprintf(stderr, paramstr[1]);
++			(void) fprintf(stderr, "%s", paramstr[1]);
+ 			exit(1);
+ 		    }
+ 		}
