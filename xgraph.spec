@@ -1,5 +1,5 @@
 %define version 12.1
-%define release %mkrel 8
+%define release %mkrel 7
 
 Summary:  Interactive plotting and graphing X11 in command line
 Name: xgraph
@@ -47,4 +47,41 @@ mv %buildroot%{_mandir}/man1/xgraph.man %buildroot%{_mandir}/man1/xgraph.1
 
 %clean
 [ %buildroot != "/" ] && rm -fr %buildroot
+
+
+
+%changelog
+* Sat Feb 20 2010 Funda Wang <fwang@mandriva.org> 12.1-7mdv2010.1
++ Revision: 508727
+- add patch to make it build
+
+  + Thierry Vignaud <tvignaud@mandriva.com>
+    - rebuild
+
+* Sun Aug 03 2008 Thierry Vignaud <tvignaud@mandriva.com> 12.1-6mdv2009.0
++ Revision: 262436
+- rebuild
+- rebuild
+
+* Thu Jan 03 2008 Olivier Blin <oblin@mandriva.com> 12.1-3mdv2008.1
++ Revision: 140957
+- restore BuildRoot
+
+  + Thierry Vignaud <tvignaud@mandriva.com>
+    - kill re-definition of %%buildroot on Pixel's request
+
+
+* Thu Aug 10 2006 Olivier Thauvin <nanardon@mandriva.org>
++ 08/10/06 22:49:08 (55550)
+- rebuild
+
+* Thu Aug 10 2006 Olivier Thauvin <nanardon@mandriva.org>
++ 08/10/06 22:45:30 (55549)
+Import xgraph
+
+* Wed Sep 28 2005 Nicolas Lécureuil <neoclust@mandriva.org> 12.1-2mdk
+- Fix BuildRequires
+
+* Wed Mar 09 2005 Olivier Thauvin <nanardon@mandrake.org> 12.1-1mdk
+- initial mdk package
 
