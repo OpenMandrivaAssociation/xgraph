@@ -13,7 +13,7 @@ Patch1: xgraph-makefile-gentoo.patch
 Patch2: xgraph-12.1-fix-str-fmt.patch
 URL: http://www.isi.edu/nsnam/xgraph
 BuildRoot: %_tmppath/%name-%version-root
-BuildRequires: libx11-devel
+BuildRequires: pkgconfig(x11)
 
 %description
 The xgraph program draws a graph on an X display given data read from
