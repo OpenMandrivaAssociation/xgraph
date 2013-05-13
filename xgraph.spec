@@ -1,5 +1,5 @@
 %define version 12.1
-%define release %mkrel 7
+%define release  8
 
 Summary:  Interactive plotting and graphing X11 in command line
 Name: xgraph
@@ -12,7 +12,6 @@ Patch0: xgraph-12.1-glibc-2.10.patch
 Patch1: xgraph-makefile-gentoo.patch
 Patch2: xgraph-12.1-fix-str-fmt.patch
 URL: http://www.isi.edu/nsnam/xgraph
-BuildRoot: %_tmppath/%name-%version-root
 BuildRequires: pkgconfig(x11)
 
 %description
