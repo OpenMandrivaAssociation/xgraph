@@ -1,13 +1,11 @@
-%define version 12.1
-%define release  9
 
 Summary:  Interactive plotting and graphing X11 in command line
 Name: xgraph
-Version: %version
-Release: %release
+Version: 12.1
+Release: 9
 License: GPL
 Group: Sciences/Mathematics
-Source: http://www.isi.edu/nsnam/dist/xgraph-%version.tar.bz2
+Source: http://www.isi.edu/nsnam/dist/xgraph-%{version}.tar.gz
 Patch0: xgraph-12.1-glibc-2.10.patch
 Patch1: xgraph-makefile-gentoo.patch
 Patch2: xgraph-12.1-fix-str-fmt.patch
@@ -33,54 +31,18 @@ control the appearance of most components of the graph.
 %make
 
 %install
-rm -rf %_tmppath/%name-%version-root
+rm -rf %_tmppath/%{name}-%{version}-root
 %makeinstall_std
-mv %buildroot%{_mandir}/manm %buildroot%{_mandir}/man1
-mv %buildroot%{_mandir}/man1/xgraph.man %buildroot%{_mandir}/man1/xgraph.1
+mv %{buildroot}%{_mandir}/manm %{buildroot}%{_mandir}/man1
+mv %{buildroot}%{_mandir}/man1/xgraph.man %{buildroot}%{_mandir}/man1/xgraph.1
 
 %files
-%defattr(-,root,root)
 %doc README* INSTALL examples
 %{_bindir}/xgraph
 %{_mandir}/man1/xgraph.*
 
 %clean
-[ %buildroot != "/" ] && rm -fr %buildroot
+[ %{buildroot} != "/" ] && rm -fr %{buildroot}
 
 
-
-%changelog
-* Sat Feb 20 2010 Funda Wang <fwang@mandriva.org> 12.1-7mdv2010.1
-+ Revision: 508727
-- add patch to make it build
-
-  + Thierry Vignaud <tvignaud@mandriva.com>
-    - rebuild
-
-* Sun Aug 03 2008 Thierry Vignaud <tvignaud@mandriva.com> 12.1-6mdv2009.0
-+ Revision: 262436
-- rebuild
-- rebuild
-
-* Thu Jan 03 2008 Olivier Blin <oblin@mandriva.com> 12.1-3mdv2008.1
-+ Revision: 140957
-- restore BuildRoot
-
-  + Thierry Vignaud <tvignaud@mandriva.com>
-    - kill re-definition of %%buildroot on Pixel's request
-
-
-* Thu Aug 10 2006 Olivier Thauvin <nanardon@mandriva.org>
-+ 08/10/06 22:49:08 (55550)
-- rebuild
-
-* Thu Aug 10 2006 Olivier Thauvin <nanardon@mandriva.org>
-+ 08/10/06 22:45:30 (55549)
-Import xgraph
-
-* Wed Sep 28 2005 Nicolas Lécureuil <neoclust@mandriva.org> 12.1-2mdk
-- Fix BuildRequires
-
-* Wed Mar 09 2005 Olivier Thauvin <nanardon@mandrake.org> 12.1-1mdk
-- initial mdk package
 

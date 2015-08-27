@@ -1,2 +1,4 @@
+removed_sources:
+  xgraph-12.1.tar.bz2: 0d5f5a538c4895a1560c9de62b04b68a74afa020
 sources:
-  "xgraph-12.1.tar.bz2": 0d5f5a538c4895a1560c9de62b04b68a74afa020
+  xgraph-12.1.tar.gz: 413e0790c57b9ce584e38848e652a00e6fd4bc23
