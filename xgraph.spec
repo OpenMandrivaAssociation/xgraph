@@ -9,7 +9,7 @@ Source: http://www.isi.edu/nsnam/dist/xgraph-%{version}.tar.gz
 Patch0: xgraph-12.1-glibc-2.10.patch
 Patch1: xgraph-makefile-gentoo.patch
 Patch2: xgraph-12.1-fix-str-fmt.patch
-URL: http://www.isi.edu/nsnam/xgraph
+URL: https://www.isi.edu/nsnam/xgraph
 BuildRequires: pkgconfig(x11)
 
 %description
